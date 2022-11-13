@@ -3,8 +3,8 @@ import java.util.OptionalInt;
 public class Person {
 
 
-    private static String name;
-    private static String surname;
+    private final String name;
+    private final String surname;
 
     private OptionalInt age;
 
@@ -32,7 +32,7 @@ public class Person {
         this.surname = surname;
     }
 
-    public static String getSurname() {
+    public String getSurname() {
         return surname;
     }
 
@@ -53,7 +53,7 @@ public class Person {
 
     }
 
-    public static String getName() {
+    public String getName() {
         return name;
     }
 

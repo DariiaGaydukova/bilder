@@ -2,12 +2,12 @@ import java.util.OptionalInt;
 
 public class PersonBuilder {
 
-    private static String name;
+    private String name;
 
     private OptionalInt age;
     private String city;
 
-    private static String surname;
+    private String surname;
     Person person;
 
 
@@ -31,19 +31,16 @@ public class PersonBuilder {
 
 
     public PersonBuilder setName(String name) {
-        PersonBuilder.name = name;
+        this.name = name;
         return PersonBuilder.this;
     }
 
     public PersonBuilder setSurname(String surname) {
-        PersonBuilder.surname = surname;
+        this.surname = surname;
         return PersonBuilder.this;
     }
 
     public PersonBuilder setAge(int age) {
-        if (age < 0) {
-            throw new IllegalStateException("Некорректно введен возраст!");
-        }
         this.age = OptionalInt.of(age);
         return this;
     }
