@@ -41,6 +41,9 @@ public class PersonBuilder {
     }
 
     public PersonBuilder setAge(int age) {
+        if (age < 0) {
+            throw new IllegalStateException("Возраст указан неправильно!");
+        }
         this.age = OptionalInt.of(age);
         return this;
     }
